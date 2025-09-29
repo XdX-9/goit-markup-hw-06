@@ -171,14 +171,21 @@ img {
 	background-color: #2e2f42;
 	padding: 72px 0;
 	background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-		url(../images/herophone.jpg);
+		url('../images/herophone.jpg');
 	/* max-width: 1440px; */
-	max-width: 320px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	margin: 0 auto;
 }
+
+@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
+	.intro {
+		background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url('../images/hero-phone-2x.jpg');
+	}
+}
+
 .intro-title {
 	color: #fff;
 	font-weight: 700;
@@ -232,10 +239,6 @@ img {
 	font-weight: 500;
 }
 
-.services-list-item {
-	/* flex-basis: calc((100% - 72px) / 4); */
-}
-
 .services-icons {
 	display: flex;
 	align-items: center;
@@ -281,10 +284,7 @@ img {
 	flex-wrap: wrap; /* add flex-wrap */
 	/* gap: 24px; */
 	gap: 72px;
-}
-
-.our-team-image {
-	width: 100%;
+	align-items: center;
 }
 
 .our-team-item:first-child {
@@ -765,19 +765,19 @@ img {
 	padding: 16px 32px;
 }
 
-@media (max-width: 1157px) {
+@media screen and (max-width: 1157px) {
 	.services-icons {
 		display: none;
 	}
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
 	.portfolio-list {
 		justify-content: center;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
 	.portfolio-list {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(356px, 1fr));
@@ -785,17 +785,23 @@ img {
 	}
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 	.container {
 		width: 768px;
 	}
 
 	.intro {
-		max-width: 768px;
 		padding: 112px 0;
 		background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-			url(../images/herotable.jpg);
+			url('../images/herotable.jpg');
 		background-size: cover;
+	}
+
+	@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
+		.intro {
+			background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url('../images/hero-tab-2x.jpg');
+		}
 	}
 
 	.intro-title {
@@ -831,7 +837,7 @@ img {
 
 	.our-team-item {
 		width: 264px;
-		width: calc((552px - 24px) / 2); /* для всех элементов */
+		width: calc((552px - 24px) / 2);
 	}
 
 	.portfolio {
@@ -877,7 +883,7 @@ img {
 	}
 }
 
-@media (min-width: 1158px) {
+@media screen and (min-width: 1158px), (-webkit-min-device-pixel-ratio: 2) {
 	.container {
 		width: 1158px;
 		margin: 0 auto;
@@ -889,8 +895,15 @@ img {
 		max-width: 1440px;
 		padding: 188px 0;
 		background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-			url(../images/peopleoffice.jpg);
+			url('../images/peopleoffice.jpg');
 		background-size: cover;
+	}
+
+	@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
+		.intro {
+			background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url('../images/hero-desk-2x.jpg');
+		}
 	}
 
 	.intro-title {
@@ -961,12 +974,8 @@ img {
 	}
 
 	.footer-info {
-		/* margin: 0 0 72px 0; */
 		margin: 0 120px 0 0;
 		align-items: flex-start;
-	}
-
-	.footer-social {
 	}
 
 	.footer-mail {
