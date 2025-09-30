@@ -177,12 +177,11 @@ img {
 	background-position: center;
 	background-size: cover;
 	margin: 0 auto;
-}
 
-@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
-	.intro {
+	@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
 		background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 			url('../images/hero-phone-2x.jpg');
+		background-size: cover;
 	}
 }
 
@@ -396,7 +395,7 @@ img {
 }
 
 .portfolio-item:hover .portfolio-overlay {
-	transform: translateY(0%);
+	transform: translateY(100%);
 }
 
 .container-portfolio {
@@ -795,12 +794,12 @@ img {
 		background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 			url('../images/herotable.jpg');
 		background-size: cover;
-	}
 
-	@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
-		.intro {
+		@media screen and (min-resolution: 2x),
+			(-webkit-min-device-pixel-ratio: 2) {
 			background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 				url('../images/hero-tab-2x.jpg');
+			background-size: cover;
 		}
 	}
 
@@ -883,7 +882,7 @@ img {
 	}
 }
 
-@media screen and (min-width: 1158px), (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (min-width: 1158px) {
 	.container {
 		width: 1158px;
 		margin: 0 auto;
@@ -897,12 +896,12 @@ img {
 		background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 			url('../images/peopleoffice.jpg');
 		background-size: cover;
-	}
 
-	@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
-		.intro {
+		@media screen and (min-resolution: 2x),
+			(-webkit-min-device-pixel-ratio: 2) {
 			background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 				url('../images/hero-desk-2x.jpg');
+			background-size: cover;
 		}
 	}
 
@@ -949,6 +948,10 @@ img {
 
 	.portfolio {
 		padding: 120px 0;
+	}
+
+	.portfolio-item:hover .portfolio-overlay {
+		transform: translateY(0%);
 	}
 
 	.portfolio-list {
